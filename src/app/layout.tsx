@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { CursorSparkle } from "@/components/CursorSparkle";
 import { Navbar } from "@/components/Navbar";
@@ -8,7 +8,17 @@ import MagicScene from "@/components/MagicScene";
 import { AiWidget } from "@/components/AiWidget";
 import { VisibilityWrapper } from "@/components/VisibilityWrapper";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"], 
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const outfit = Outfit({ 
+  subsets: ["latin"], 
+  variable: "--font-outfit",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Magicbuilds | AI SaaS, Web & Custom Software",
@@ -22,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} antialiased min-h-screen flex flex-col bg-[#050505] text-[#F8FAFC]`}>
+      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased min-h-screen flex flex-col bg-[#050505] text-[#F8FAFC]`}>
         <MagicScene />
         <CursorSparkle />
         

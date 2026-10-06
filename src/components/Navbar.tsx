@@ -39,7 +39,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group hover:opacity-80 active:scale-95 transition-all">
             <Sparkles className="w-6 h-6 text-gold-500 group-hover:text-gold-400 transition-colors" />
-            <span className="font-bold text-xl tracking-tight text-white group-hover:text-glow transition-all">
+            <span className="font-heading font-bold text-xl tracking-tight text-white group-hover:text-glow transition-all">
               Magicbuilds
             </span>
           </Link>

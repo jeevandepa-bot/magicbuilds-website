@@ -7,6 +7,8 @@
   --color-gold-600: #CA8A04;
   --color-background: #050505;
   --color-foreground: #F8FAFC;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
 }
 
 :root {
