@@ -26,14 +26,14 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <Link
             href="/contact"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all magic-glow flex items-center justify-center gap-2 group text-center"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all active:scale-95 magic-glow flex items-center justify-center gap-2 group text-center"
           >
             Start Your Project
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
             href="/services"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-medium text-lg hover:bg-white/10 transition-colors text-center"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-medium text-lg hover:bg-white/10 transition-all active:scale-95 text-center"
           >
             Explore Services
           </Link>
@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* Services Snapshot */}
-      <section className="w-full max-w-7xl mx-auto px-4 py-16 sm:py-24">
+      <section className="w-full max-w-7xl mx-auto px-4 py-16 sm:py-24 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Expertise</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">Everything you need to dominate the digital landscape, crafted with precision and magic.</p>
@@ -54,7 +54,7 @@ export default function Home() {
             { title: "SEO", desc: "Data-driven strategies to rank higher.", icon: <Search className="w-8 h-8 text-gold-500 mb-4 sm:mb-6" /> },
             { title: "Custom Software", desc: "Tailored solutions for complex problems.", icon: <Sparkles className="w-8 h-8 text-gold-500 mb-4 sm:mb-6" /> },
           ].map((service, i) => (
-            <div key={i} className="p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5 hover:border-gold-500/30 transition-all hover:-translate-y-2 group">
+            <div key={i} className="p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-white/[0.02] backdrop-blur-3xl border border-white/10 hover:border-gold-500/30 transition-all hover:-translate-y-2 group">
               {service.icon}
               <h3 className="text-xl font-bold mb-3 group-hover:text-gold-400 transition-colors">{service.title}</h3>
               <p className="text-gray-400 leading-relaxed">{service.desc}</p>

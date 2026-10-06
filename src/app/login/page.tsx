@@ -19,12 +19,12 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#050505]">
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-500/5 blur-[150px] rounded-full pointer-events-none" />
       
-      <div className="w-full max-w-md mx-4 p-6 sm:p-8 rounded-3xl bg-[#0a0a0a]/80 backdrop-blur-xl border border-white/10 shadow-2xl relative z-10">
+      <div className="w-full max-w-md mx-4 p-6 sm:p-8 rounded-3xl bg-white/[0.02] backdrop-blur-3xl border border-white/10 shadow-2xl relative z-10">
         <div className="text-center mb-10">
-          <Link href="/" className="inline-flex items-center gap-2 mb-6 group">
+          <Link href="/" className="inline-flex items-center gap-2 mb-6 group hover:opacity-80 active:scale-95 transition-all">
             <Sparkles className="w-6 h-6 text-gold-500 group-hover:text-gold-400 transition-colors" />
             <span className="font-bold text-xl text-white">Magicbuilds</span>
           </Link>
@@ -38,19 +38,19 @@ export default function Login() {
             <input 
               type="email" 
               defaultValue="demo@client.com"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 transition-colors"
+              className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.05] transition-all"
               required
             />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <label className="text-sm font-medium text-gray-300">Password</label>
-              <a href="#" className="text-xs text-gold-500 hover:text-gold-400">Forgot?</a>
+              <a href="#" className="text-xs text-gold-500 hover:text-gold-400 transition-colors">Forgot?</a>
             </div>
             <input 
               type="password" 
               defaultValue="password123"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 transition-colors"
+              className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.05] transition-all"
               required
             />
           </div>
@@ -58,7 +58,7 @@ export default function Login() {
           <button 
             type="submit"
             disabled={isLoading}
-            className="w-full py-4 rounded-xl bg-gold-500 text-black font-bold flex items-center justify-center gap-2 hover:bg-gold-400 transition-all disabled:opacity-70 magic-glow mt-4"
+            className="w-full py-4 rounded-xl bg-gold-500 text-black font-bold flex items-center justify-center gap-2 hover:bg-gold-400 transition-all disabled:opacity-70 active:scale-95 magic-glow mt-4"
           >
             {isLoading ? (
               <div className="flex gap-1 items-center">

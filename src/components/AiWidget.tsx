@@ -51,7 +51,7 @@ export function AiWidget() {
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          "fixed bottom-5 right-4 sm:bottom-6 sm:right-6 p-3.5 sm:p-4 rounded-full bg-gold-500 text-black shadow-lg shadow-gold-500/20 hover:scale-105 transition-all z-40 magic-glow",
+          "fixed bottom-5 right-4 sm:bottom-6 sm:right-6 p-3.5 sm:p-4 rounded-full bg-gold-500 text-black shadow-lg shadow-gold-500/20 hover:scale-105 active:scale-95 transition-all z-40 magic-glow",
           isOpen ? "scale-0 opacity-0 pointer-events-none" : "scale-100 opacity-100"
         )}
         aria-label="Open AI Assistant"
@@ -62,19 +62,19 @@ export function AiWidget() {
       {/* Chat Window */}
       <div
         className={cn(
-          "fixed inset-x-3 bottom-3 sm:inset-x-auto sm:right-6 sm:bottom-6 w-auto sm:w-[400px] h-[calc(100dvh-5rem)] sm:h-[500px] max-h-[600px] bg-[#0a0a0a] border border-white/10 rounded-2xl flex flex-col shadow-2xl transition-all duration-300 z-50 overflow-hidden",
+          "fixed inset-x-3 bottom-3 sm:inset-x-auto sm:right-6 sm:bottom-6 w-auto sm:w-[400px] h-[calc(100dvh-5rem)] sm:h-[500px] max-h-[600px] bg-white/[0.02] backdrop-blur-3xl border border-white/10 rounded-2xl flex flex-col shadow-2xl transition-all duration-300 z-50 overflow-hidden",
           isOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0 pointer-events-none"
         )}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-white/10 bg-black/50">
+        <div className="flex items-center justify-between p-4 border-b border-white/10 bg-black/20">
           <div className="flex items-center gap-2">
             <Bot className="w-5 h-5 text-gold-500" />
             <h3 className="font-semibold text-white">Magicbuilds AI</h3>
           </div>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
+            className="p-2 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-all active:scale-95"
           >
             <X className="w-5 h-5" />
           </button>
@@ -116,19 +116,19 @@ export function AiWidget() {
         </div>
 
         {/* Input */}
-        <form onSubmit={handleSubmit} className="p-4 bg-black/50 border-t border-white/10 relative">
+        <form onSubmit={handleSubmit} className="p-4 bg-black/20 border-t border-white/10 relative">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about our services..."
-            className="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-gold-500/50 transition-colors"
+            className="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-gold-500/50 focus:bg-white/10 transition-all"
             disabled={isLoading}
           />
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
-            className="absolute right-6 top-1/2 -translate-y-1/2 p-2 rounded-lg text-gold-500 hover:bg-gold-500/10 disabled:opacity-50 disabled:hover:bg-transparent transition-colors"
+            className="absolute right-6 top-1/2 -translate-y-1/2 p-2 rounded-lg text-gold-500 hover:bg-gold-500/10 disabled:opacity-50 disabled:hover:bg-transparent transition-all active:scale-90"
           >
             <Send className="w-4 h-4" />
           </button>

@@ -20,7 +20,7 @@ export default function DashboardOverview() {
         {stats.map((stat) => {
           const Icon = stat.icon;
           return (
-            <div key={stat.name} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5 hover:border-gold-500/20 transition-colors">
+            <div key={stat.name} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.02] backdrop-blur-3xl border border-white/10 hover:border-gold-500/20 transition-all">
               <div className="flex items-center justify-between mb-4">
                 <div className="p-2 rounded-lg bg-gold-500/10 text-gold-500">
                   <Icon className="w-5 h-5" />
@@ -39,19 +39,19 @@ export default function DashboardOverview() {
 
       {/* Main Charts Area (Mocked UI) */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
-        <div className="lg:col-span-2 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5 overflow-hidden">
+        <div className="lg:col-span-2 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.02] backdrop-blur-3xl border border-white/10 overflow-hidden">
           <div className="flex items-center justify-between mb-6 sm:mb-8">
             <h3 className="font-bold text-white text-sm sm:text-base">Revenue Analytics</h3>
-            <select className="bg-black border border-white/10 rounded-lg px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm text-gray-400 focus:outline-none">
-              <option>Last 30 Days</option>
-              <option>This Year</option>
+            <select className="bg-white/[0.03] border border-white/10 rounded-lg px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm text-gray-400 focus:outline-none focus:border-gold-500/50 appearance-none">
+              <option className="bg-black text-white">Last 30 Days</option>
+              <option className="bg-black text-white">This Year</option>
             </select>
           </div>
           {/* Mock Chart visually constructed with divs */}
           <div className="h-48 sm:h-64 flex items-end justify-between gap-1 sm:gap-2 px-1 sm:px-2">
             {[40, 25, 60, 45, 80, 55, 90, 75, 100, 65, 85, 70].map((height, i) => (
-              <div key={i} className="w-full bg-white/5 rounded-t-sm sm:rounded-t-md relative group hover:bg-gold-500/20 transition-colors" style={{ height: `${height}%` }}>
-                <div className="absolute -top-8 sm:-top-10 left-1/2 -translate-x-1/2 bg-black text-[10px] sm:text-xs font-bold py-0.5 px-1 sm:py-1 sm:px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-gold-400">
+              <div key={i} className="w-full bg-white/10 rounded-t-sm sm:rounded-t-md relative group hover:bg-gold-500/30 transition-all cursor-pointer" style={{ height: `${height}%` }}>
+                <div className="absolute -top-8 sm:-top-10 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md text-[10px] sm:text-xs font-bold py-0.5 px-1 sm:py-1 sm:px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity border border-white/10 text-gold-400">
                   ${height}k
                 </div>
               </div>
@@ -59,7 +59,7 @@ export default function DashboardOverview() {
           </div>
         </div>
 
-        <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5">
+        <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.02] backdrop-blur-3xl border border-white/10">
           <h3 className="font-bold text-white mb-6">Recent Activity</h3>
           <div className="space-y-6">
             {[

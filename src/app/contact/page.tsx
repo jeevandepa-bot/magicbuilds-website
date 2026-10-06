@@ -14,7 +14,7 @@ export default function Contact() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Contact Form */}
-        <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-white/5 relative overflow-hidden">
+        <div className="p-6 sm:p-8 md:p-10 rounded-3xl bg-white/[0.02] backdrop-blur-3xl border border-white/10 relative overflow-hidden">
           <div className="absolute -top-40 -right-40 w-[400px] h-[400px] bg-gold-500/10 blur-[120px] rounded-full pointer-events-none" />
           
           <form className="relative z-10 space-y-6">
@@ -24,7 +24,7 @@ export default function Contact() {
                 <input 
                   type="text" 
                   id="firstName" 
-                  className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/50 transition-colors"
+                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.05] focus:ring-1 focus:ring-gold-500/50 transition-all"
                   placeholder="John"
                 />
               </div>
@@ -33,7 +33,7 @@ export default function Contact() {
                 <input 
                   type="text" 
                   id="lastName" 
-                  className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/50 transition-colors"
+                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.05] focus:ring-1 focus:ring-gold-500/50 transition-all"
                   placeholder="Doe"
                 />
               </div>
@@ -44,7 +44,7 @@ export default function Contact() {
               <input 
                 type="email" 
                 id="email" 
-                className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/50 transition-colors"
+                className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.05] focus:ring-1 focus:ring-gold-500/50 transition-all"
                 placeholder="john@example.com"
               />
             </div>
@@ -53,13 +53,13 @@ export default function Contact() {
               <label htmlFor="service" className="text-sm font-medium text-gray-300">Service Required</label>
               <select 
                 id="service" 
-                className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/50 transition-colors appearance-none"
+                className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.05] focus:ring-1 focus:ring-gold-500/50 transition-all appearance-none"
               >
-                <option value="">Select a service...</option>
-                <option value="ai">AI SaaS Development</option>
-                <option value="web">Web Development</option>
-                <option value="seo">SEO & Digital Marketing</option>
-                <option value="custom">Custom Software</option>
+                <option value="" className="bg-black text-white">Select a service...</option>
+                <option value="ai" className="bg-black text-white">AI SaaS Development</option>
+                <option value="web" className="bg-black text-white">Web Development</option>
+                <option value="seo" className="bg-black text-white">SEO & Digital Marketing</option>
+                <option value="custom" className="bg-black text-white">Custom Software</option>
               </select>
             </div>
 
@@ -68,14 +68,14 @@ export default function Contact() {
               <textarea 
                 id="message" 
                 rows={4}
-                className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/50 transition-colors resize-none"
+                className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.05] focus:ring-1 focus:ring-gold-500/50 transition-all resize-none"
                 placeholder="Tell us about your project..."
               ></textarea>
             </div>
 
             <button 
               type="button"
-              className="w-full py-4 rounded-xl bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all magic-glow mt-4"
+              className="w-full py-4 rounded-xl bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all active:scale-95 magic-glow mt-4"
             >
               Send Message
             </button>

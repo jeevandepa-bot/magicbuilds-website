@@ -49,8 +49,8 @@ export default function Services() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {services.map((service, idx) => (
-          <div key={idx} className="p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] border border-white/5 hover:border-gold-500/30 hover:bg-white/[0.04] transition-all duration-300">
-            <div className="mb-6 sm:mb-8 p-3 sm:p-4 bg-white/5 rounded-2xl inline-block">
+          <div key={idx} className="p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] backdrop-blur-3xl border border-white/10 hover:border-gold-500/30 hover:bg-white/[0.04] transition-all duration-300">
+            <div className="mb-6 sm:mb-8 p-3 sm:p-4 bg-white/5 border border-white/10 rounded-2xl inline-block shadow-inner">
               {service.icon}
             </div>
             <h3 className="text-xl sm:text-2xl font-bold mb-4">{service.title}</h3>
@@ -61,14 +61,14 @@ export default function Services() {
         ))}
       </div>
 
-      <div className="mt-16 sm:mt-24 text-center p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-white/[0.05] to-transparent border border-white/10 relative overflow-hidden">
+      <div className="mt-16 sm:mt-24 text-center p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-white/[0.05] to-transparent backdrop-blur-3xl border border-white/10 relative overflow-hidden">
         <h2 className="text-3xl font-bold mb-6">Need something highly custom?</h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
           We love tackling unique challenges. If you have a specific vision in mind, let's talk and figure out the best technological path forward.
         </p>
         <Link
           href="/contact"
-          className="inline-flex px-8 py-4 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all magic-glow"
+          className="inline-flex px-8 py-4 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all active:scale-95 magic-glow"
         >
           Discuss Your Vision
         </Link>

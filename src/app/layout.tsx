@@ -23,18 +23,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} antialiased min-h-screen flex flex-col bg-[#050505] text-[#F8FAFC]`}>
-        <VisibilityWrapper>
-          <MagicScene />
-        </VisibilityWrapper>
-        
+        <MagicScene />
         <CursorSparkle />
         
+        {/* Keep AI widget global for magical feeling everywhere */}
+        <AiWidget />
+        
         <VisibilityWrapper>
-          <AiWidget />
           <Navbar />
         </VisibilityWrapper>
         
-        <main className="flex-1 flex flex-col">
+        <main className="flex-1 flex flex-col relative z-10">
           {children}
         </main>
         
