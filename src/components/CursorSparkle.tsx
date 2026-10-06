@@ -88,7 +88,7 @@ export function CursorSparkle() {
       spawnParticles(e.clientX, e.clientY);
     };
 
-    const handleTouchMove = (e: TouchEvent) => {
+    const handleTouch = (e: TouchEvent) => {
       if (e.touches.length > 0) {
         spawnParticles(e.touches[0].clientX, e.touches[0].clientY);
       }
@@ -100,7 +100,8 @@ export function CursorSparkle() {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    window.addEventListener("touchmove", handleTouch, { passive: true });
+    window.addEventListener("touchstart", handleTouch, { passive: true });
     window.addEventListener("resize", handleResize);
 
     const animate = () => {
@@ -121,7 +122,8 @@ export function CursorSparkle() {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchmove", handleTouch);
+      window.removeEventListener("touchstart", handleTouch);
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
       clearTimeout(timeoutId);

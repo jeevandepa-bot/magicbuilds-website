@@ -8,36 +8,36 @@ import { usePathname } from "next/navigation";
 
 function ParticleSwarm({ count = 3000 }) {
   const pointsRef = useRef<THREE.Points>(null);
-  const [hovered, setHovered] = useState(false);
+  const groupRef = useRef<THREE.Group>(null);
   
   // Mouse position state for parallax
   const mouse = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Normalize mouse coordinates to -1 to +1
       mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
       mouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
     };
-    const handleTouchMove = (e: TouchEvent) => {
+    const handleTouch = (e: TouchEvent) => {
       if (e.touches.length > 0) {
         mouse.current.x = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
         mouse.current.y = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
       }
     };
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    window.addEventListener("touchmove", handleTouch, { passive: true });
+    window.addEventListener("touchstart", handleTouch, { passive: true });
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchmove", handleTouch);
+      window.removeEventListener("touchstart", handleTouch);
     };
   }, []);
 
-  // Generate random positions on a sphere
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      const radius = 10 + Math.random() * 20; // 10 to 30 radius
+      const radius = 10 + Math.random() * 20;
       const theta = Math.random() * 2 * Math.PI;
       const phi = Math.acos(Math.random() * 2 - 1);
       
@@ -54,36 +54,37 @@ function ParticleSwarm({ count = 3000 }) {
 
   useFrame((state, delta) => {
     if (pointsRef.current) {
-      // Slow base rotation
       pointsRef.current.rotation.y -= delta * 0.05;
       pointsRef.current.rotation.x -= delta * 0.02;
-
-      // Mouse parallax effect (smooth interpolation)
+    }
+    if (groupRef.current) {
       const targetX = mouse.current.y * 0.2;
       const targetY = mouse.current.x * 0.2;
       
-      pointsRef.current.rotation.x += (targetX - pointsRef.current.rotation.x) * 0.02;
-      pointsRef.current.rotation.y += (targetY - pointsRef.current.rotation.y) * 0.02;
+      groupRef.current.rotation.x += (targetX - groupRef.current.rotation.x) * 0.05;
+      groupRef.current.rotation.y += (targetY - groupRef.current.rotation.y) * 0.05;
     }
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
-      <Points
-        ref={pointsRef}
-        positions={particlesPosition}
-        stride={3}
-        frustumCulled={false}
-      >
-        <PointMaterial
-          transparent
-          color="#FDE047" // Gold-300
-          size={0.05}
-          sizeAttenuation={true}
-          depthWrite={false}
-          blending={THREE.AdditiveBlending}
-        />
-      </Points>
+    <group ref={groupRef}>
+      <group rotation={[0, 0, Math.PI / 4]}>
+        <Points
+          ref={pointsRef}
+          positions={particlesPosition}
+          stride={3}
+          frustumCulled={false}
+        >
+          <PointMaterial
+            transparent
+            color="#FDE047"
+            size={0.05}
+            sizeAttenuation={true}
+            depthWrite={false}
+            blending={THREE.AdditiveBlending}
+          />
+        </Points>
+      </group>
     </group>
   );
 }
