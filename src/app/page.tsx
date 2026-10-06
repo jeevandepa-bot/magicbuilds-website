@@ -7,35 +7,33 @@ export default function Home() {
       {/* Hero Section */}
       <section className="w-full min-h-[90vh] flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
         {/* Magic Background Glow */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[800px] h-[800px] bg-gold-500/10 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/10 blur-[150px] rounded-full pointer-events-none" />
 
-        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/[0.03] border border-white/10 mb-10 backdrop-blur-md magic-glow">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm magic-glow">
           <Sparkles className="w-4 h-4 text-gold-500" />
-          <span className="text-xs font-semibold tracking-widest uppercase text-gray-300">Digital Alchemy</span>
+          <span className="text-sm font-medium text-gray-200">Transforming ideas into digital magic</span>
         </div>
 
-        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[8rem] font-heading font-semibold tracking-tighter mb-8 max-w-5xl leading-[0.9] break-words">
-          We build <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-600 text-glow italic pr-4">extraordinary</span><br className="hidden md:block" />
-          experiences.
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-heading font-bold tracking-tight mb-6 sm:mb-8 max-w-4xl leading-tight break-words">
+          We build <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-600 text-glow italic">extraordinary</span> digital experiences
         </h1>
         
-        <p className="text-xl md:text-2xl text-gray-400 mb-14 max-w-2xl leading-relaxed font-light">
-          From AI-powered SaaS platforms to high-converting websites. 
-          We bring the magic that scales your business.
+        <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl leading-relaxed">
+          From AI-powered SaaS platforms to high-converting websites and custom software solutions. 
+          We bring the magic that makes your business grow.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <Link
             href="/contact"
-            className="w-full sm:w-auto px-10 py-5 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all active:scale-95 magic-glow flex items-center justify-center gap-3 group text-center"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all active:scale-95 magic-glow flex items-center justify-center gap-2 group text-center"
           >
             Start Your Project
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
             href="/services"
-            className="w-full sm:w-auto px-10 py-5 rounded-full bg-white/[0.03] border border-white/10 text-white font-medium text-lg hover:bg-white/10 transition-all active:scale-95 text-center backdrop-blur-md"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-medium text-lg hover:bg-white/10 transition-all active:scale-95 text-center"
           >
             Explore Services
           </Link>
