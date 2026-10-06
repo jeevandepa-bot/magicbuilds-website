@@ -16,15 +16,13 @@ function ParticleSwarm({ count = 3000, isMobile = false }) {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      pointer.current.x = (e.clientX / window.innerWidth) * 2 - 1;
-      pointer.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
-    };
-    const handleTouch = (e: TouchEvent) => {
-      if (e.touches.length > 0) {
-        pointer.current.x = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
-        pointer.current.y = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+      // Only apply mouse parallax on desktop
+      if (!isMobile) {
+        pointer.current.x = (e.clientX / window.innerWidth) * 2 - 1;
+        pointer.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
       }
     };
+
     const handleDeviceOrientation = (e: DeviceOrientationEvent) => {
       if (e.gamma === null || e.beta === null) return;
       
@@ -38,17 +36,13 @@ function ParticleSwarm({ count = 3000, isMobile = false }) {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchmove", handleTouch, { passive: true });
-    window.addEventListener("touchstart", handleTouch, { passive: true });
     window.addEventListener("deviceorientation", handleDeviceOrientation);
     
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("touchmove", handleTouch);
-      window.removeEventListener("touchstart", handleTouch);
       window.removeEventListener("deviceorientation", handleDeviceOrientation);
     };
-  }, []);
+  }, [isMobile]);
 
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(count * 3);

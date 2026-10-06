@@ -3,7 +3,7 @@ import { Sparkles, MessageCircle, Globe, AtSign } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#050505] pt-16 pb-8 mt-auto relative overflow-hidden">
+    <footer className="border-t border-white/10 bg-transparent pt-16 pb-8 mt-auto relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gold-500/5 blur-[120px] rounded-full pointer-events-none" />
 
