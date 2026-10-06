@@ -19,8 +19,18 @@ function ParticleSwarm({ count = 3000 }) {
       mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
       mouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
     };
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        mouse.current.x = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+        mouse.current.y = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+      }
+    };
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
   }, []);
 
   // Generate random positions on a sphere
@@ -80,23 +90,22 @@ function ParticleSwarm({ count = 3000 }) {
 
 export default function MagicScene() {
   const [isMounted, setIsMounted] = useState(false);
-  const [isMobile, setIsMobile] = useState(true); // Default true for safety
+  const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
     setIsMounted(true);
-    // Disable heavy 3D on mobile
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  if (!isMounted || isMobile) return null;
+  if (!isMounted) return null;
 
   return (
     <div className="fixed inset-0 z-[-1] pointer-events-none bg-transparent">
       <Canvas camera={{ position: [0, 0, 15], fov: 60 }}>
-        <ParticleSwarm count={4000} />
+        <ParticleSwarm count={isMobile ? 1200 : 4000} />
       </Canvas>
     </div>
   );

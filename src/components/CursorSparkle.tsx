@@ -53,11 +53,6 @@ export function CursorSparkle() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   
   useEffect(() => {
-    // Disable on touch devices/mobile to save battery & performance
-    if (window.matchMedia("(hover: none)").matches || window.innerWidth < 768) {
-      return;
-    }
-
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -73,12 +68,12 @@ export function CursorSparkle() {
     let isMoving = false;
     let timeoutId: NodeJS.Timeout;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
+    const spawnParticles = (x: number, y: number) => {
+      mouse.x = x;
+      mouse.y = y;
       isMoving = true;
       
-      // Add particles at mouse position
+      // Add particles at touch/mouse position
       for (let i = 0; i < 2; i++) {
         particles.push(new Particle(mouse.x, mouse.y));
       }
@@ -89,12 +84,23 @@ export function CursorSparkle() {
       }, 100);
     };
 
+    const handleMouseMove = (e: MouseEvent) => {
+      spawnParticles(e.clientX, e.clientY);
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        spawnParticles(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
 
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
     window.addEventListener("resize", handleResize);
 
     const animate = () => {
@@ -115,6 +121,7 @@ export function CursorSparkle() {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
       clearTimeout(timeoutId);
