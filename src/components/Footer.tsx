@@ -42,17 +42,22 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Company</h3>
+            <h3 className="font-semibold text-white mb-4">Locations</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-400 hover:text-gold-400 transition-colors text-sm">About Us</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-gold-400 transition-colors text-sm">Contact</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-gold-400 transition-colors text-sm">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-gold-400 transition-colors text-sm">Terms of Service</Link></li>
+              <li><Link href="/locations/new-york/ai-saas" className="text-gray-400 hover:text-gold-400 transition-colors text-sm">New York AI SaaS</Link></li>
+              <li><Link href="/locations/london/web-development" className="text-gray-400 hover:text-gold-400 transition-colors text-sm">London Web Dev</Link></li>
+              <li><Link href="/locations/austin/seo" className="text-gray-400 hover:text-gold-400 transition-colors text-sm">Austin SEO</Link></li>
+              <li><Link href="/locations/singapore/custom-software" className="text-gray-400 hover:text-gold-400 transition-colors text-sm">Singapore Software</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-6 text-sm text-gray-500">
+            <Link href="/about" className="hover:text-gold-400 transition-colors">About Us</Link>
+            <Link href="/contact" className="hover:text-gold-400 transition-colors">Contact</Link>
+            <Link href="#" className="hover:text-gold-400 transition-colors">Privacy Policy</Link>
+          </div>
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Magicbuilds. All rights reserved.
           </p>
