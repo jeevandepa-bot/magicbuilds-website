@@ -13,7 +13,7 @@ type Message = {
 export function AiWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: "ai", content: "Hello! I'm the Magicbuilds AI. How can I help you today?" }
+    { role: "ai", content: "Hello! I'm the MagicBuilds AI. How can I help you today?" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -70,7 +70,7 @@ export function AiWidget() {
         <div className="flex items-center justify-between p-4 border-b border-white/10 bg-black/20">
           <div className="flex items-center gap-2">
             <Bot className="w-5 h-5 text-gold-500" />
-            <h3 className="font-semibold text-white">Magicbuilds AI</h3>
+            <h3 className="font-semibold text-white">MagicBuilds AI</h3>
           </div>
           <button
             onClick={() => setIsOpen(false)}

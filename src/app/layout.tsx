@@ -21,7 +21,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Magicbuilds | AI SaaS, Web & Custom Software",
+  title: "MagicBuilds | AI SaaS, Web & Custom Software",
   description: "We weave code and strategy to build magical digital experiences, AI SaaS products, and custom software that accelerates business growth.",
 };
 

@@ -1,5 +1,5 @@
 # Goal
-Elevate the visual design, typography, spacing, and content structure of the Magicbuilds website so it looks like a premium, bespoke, human-crafted agency site, entirely removing the generic "AI-generated template" feel.
+Elevate the visual design, typography, spacing, and content structure of the MagicBuilds website so it looks like a premium, bespoke, human-crafted agency site, entirely removing the generic "AI-generated template" feel.
 
 ## Acceptance criteria
 - Typography is sophisticated (varying weights, better letter-spacing, potential introduction of a secondary serif or premium sans-serif font).

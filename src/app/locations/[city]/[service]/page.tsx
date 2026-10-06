@@ -36,8 +36,8 @@ export async function generateMetadata({
   
   // Dynamic SEO Metadata
   return {
-    title: `Top ${serviceName} Company in ${cityName} | Magicbuilds`,
-    description: `Looking for the best ${serviceName} experts in ${cityName}? Magicbuilds delivers high-performance digital solutions tailored for your business.`,
+    title: `Top ${serviceName} Company in ${cityName} | MagicBuilds`,
+    description: `Looking for the best ${serviceName} experts in ${cityName}? MagicBuilds delivers high-performance digital solutions tailored for your business.`,
   };
 }
 
@@ -81,7 +81,7 @@ export default async function LocationServicePage({
       <section className="w-full max-w-5xl mx-auto px-4 py-24 border-t border-white/10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Why choose Magicbuilds for {serviceName} in {cityName}?</h2>
+            <h2 className="text-3xl font-bold mb-6">Why choose MagicBuilds for {serviceName} in {cityName}?</h2>
             <p className="text-gray-400 mb-8 leading-relaxed">
               The digital landscape in {cityName} is highly competitive. Our {serviceName.toLowerCase()} strategies are designed not just to compete, but to completely outperform your industry rivals.
             </p>
@@ -98,7 +98,7 @@ export default async function LocationServicePage({
              <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/20 blur-[60px] rounded-full pointer-events-none" />
              <Sparkles className="w-12 h-12 text-gold-500 mb-6" />
              <h3 className="text-2xl font-bold text-white mb-4">Ready to start?</h3>
-             <p className="text-gray-400 mb-6">Join dozens of successful companies in {cityName} who trust Magicbuilds.</p>
+             <p className="text-gray-400 mb-6">Join dozens of successful companies in {cityName} who trust MagicBuilds.</p>
              <Link href="/contact" className="block w-full text-center py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-all">
                Contact Our Team
              </Link>

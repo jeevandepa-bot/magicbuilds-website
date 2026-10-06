@@ -31,7 +31,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="h-20 flex items-center px-6 border-b border-white/10">
           <Link href="/" className="flex items-center gap-2 group hover:opacity-80 active:scale-95 transition-all">
             <Sparkles className="w-5 h-5 text-gold-500" />
-            <span className="font-bold text-lg text-white">Magicbuilds</span>
+            <span className="font-bold text-lg text-white">MagicBuilds</span>
           </Link>
         </div>
         
@@ -75,7 +75,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <div className="flex items-center gap-4 flex-1">
             <Link href="/" className="md:hidden flex items-center gap-2 active:scale-95 transition-transform">
               <Sparkles className="w-5 h-5 text-gold-500" />
-              <span className="font-bold text-sm text-white">Magicbuilds</span>
+              <span className="font-bold text-sm text-white">MagicBuilds</span>
             </Link>
             <div className="relative w-full max-w-md hidden md:block">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />

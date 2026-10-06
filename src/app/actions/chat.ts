@@ -19,7 +19,7 @@ export async function generateAIResponse(prompt: string) {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const result = await model.generateContent(`
-You are the AI assistant for "Magicbuilds", an elite agency specializing in AI SaaS platforms, Web Development, SEO, and Custom Software.
+You are the AI assistant for "MagicBuilds", an elite agency specializing in AI SaaS platforms, Web Development, SEO, and Custom Software.
 Keep your answer concise, helpful, and slightly enthusiastic/magical in tone. 
 
 User prompt: ${prompt}

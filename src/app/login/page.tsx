@@ -26,7 +26,7 @@ export default function Login() {
         <div className="text-center mb-10">
           <Link href="/" className="inline-flex items-center gap-2 mb-6 group hover:opacity-80 active:scale-95 transition-all">
             <Sparkles className="w-6 h-6 text-gold-500 group-hover:text-gold-400 transition-colors" />
-            <span className="font-bold text-xl text-white">Magicbuilds</span>
+            <span className="font-bold text-xl text-white">MagicBuilds</span>
           </Link>
           <h1 className="text-2xl font-bold text-white mb-2">Client Portal</h1>
           <p className="text-gray-400 text-sm">Enter your credentials to access your dashboard.</p>

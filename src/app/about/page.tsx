@@ -3,7 +3,7 @@ export default function About() {
     <div className="max-w-4xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-          About <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-600 text-glow">Magicbuilds</span>
+          About <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-600 text-glow">MagicBuilds</span>
         </h1>
         <p className="text-xl text-gray-400">
           Where engineering meets art.
@@ -15,7 +15,7 @@ export default function About() {
           <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gold-500/10 blur-[100px] rounded-full pointer-events-none" />
           <h2 className="text-2xl font-bold mb-4 text-white">Our Mission</h2>
           <p className="text-gray-400 leading-relaxed mb-6">
-            We started Magicbuilds with a simple premise: enterprise-grade software doesn't have to be boring, and highly creative websites don't have to be slow. By combining strict engineering practices with cutting-edge design and animation, we build digital products that leave a lasting impression.
+            We started MagicBuilds with a simple premise: enterprise-grade software doesn't have to be boring, and highly creative websites don't have to be slow. By combining strict engineering practices with cutting-edge design and animation, we build digital products that leave a lasting impression.
           </p>
           <p className="text-gray-400 leading-relaxed">
             Whether we are architecting a complex AI SaaS backend or fine-tuning the cursor sparks on a landing page, our attention to detail remains absolute.

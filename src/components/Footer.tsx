@@ -12,7 +12,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Sparkles className="w-5 h-5 text-gold-500" />
-              <span className="font-bold text-lg text-white">Magicbuilds</span>
+              <span className="font-bold text-lg text-white">MagicBuilds</span>
             </Link>
             <p className="text-gray-400 max-w-sm mb-6 leading-relaxed">
               We weave code and strategy to build magical digital experiences,
@@ -59,7 +59,7 @@ export function Footer() {
             <Link href="#" className="hover:text-gold-400 transition-colors">Privacy Policy</Link>
           </div>
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Magicbuilds. All rights reserved.
+            © {new Date().getFullYear()} MagicBuilds. All rights reserved.
           </p>
         </div>
       </div>
