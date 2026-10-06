@@ -105,7 +105,7 @@ export default function MagicScene() {
 
   return (
     <div className="fixed inset-0 z-[-1] pointer-events-none bg-transparent">
-      <Canvas camera={{ position: [0, 0, 15], fov: 60 }}>
+      <Canvas camera={{ position: [0, 0, isMobile ? 28 : 15], fov: isMobile ? 75 : 60 }}>
         <ParticleSwarm count={isMobile ? 1200 : 4000} />
       </Canvas>
     </div>
