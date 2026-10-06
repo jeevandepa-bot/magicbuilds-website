@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-300: #FDE047;
+  --color-gold-400: #FACC15;
+  --color-gold-500: #EAB308;
+  --color-gold-600: #CA8A04;
+  --color-background: #050505;
+  --color-foreground: #F8FAFC;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #F8FAFC;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Custom Magic Glow */
+.magic-glow {
+  box-shadow: 0 0 20px 2px rgba(234, 179, 8, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.magic-glow:hover {
+  box-shadow: 0 0 30px 5px rgba(234, 179, 8, 0.5);
+}
+
+/* Text glow */
+.text-glow {
+  text-shadow: 0 0 10px rgba(234, 179, 8, 0.6);
+}
