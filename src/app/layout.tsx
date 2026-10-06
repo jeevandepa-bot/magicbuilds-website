@@ -4,6 +4,7 @@ import "./globals.css";
 import { CursorSparkle } from "@/components/CursorSparkle";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import MagicScene from "@/components/MagicScene";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} antialiased min-h-screen flex flex-col bg-[#050505] text-[#F8FAFC]`}>
+        <MagicScene />
         <CursorSparkle />
         <Navbar />
         <main className="flex-1 pt-20">
