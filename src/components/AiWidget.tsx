@@ -62,7 +62,7 @@ export function AiWidget() {
       {/* Chat Window */}
       <div
         className={cn(
-          "fixed bottom-6 right-6 w-[350px] sm:w-[400px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl flex flex-col shadow-2xl transition-all duration-300 z-50 overflow-hidden",
+          "fixed bottom-6 right-6 w-[calc(100vw-3rem)] sm:w-[400px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl flex flex-col shadow-2xl transition-all duration-300 z-50 overflow-hidden",
           isOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0 pointer-events-none"
         )}
       >

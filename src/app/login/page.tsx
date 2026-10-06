@@ -22,7 +22,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#050505]">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-500/5 blur-[150px] rounded-full pointer-events-none" />
       
-      <div className="w-full max-w-md p-8 rounded-3xl bg-[#0a0a0a]/80 backdrop-blur-xl border border-white/10 shadow-2xl relative z-10">
+      <div className="w-full max-w-md mx-4 p-6 sm:p-8 rounded-3xl bg-[#0a0a0a]/80 backdrop-blur-xl border border-white/10 shadow-2xl relative z-10">
         <div className="text-center mb-10">
           <Link href="/" className="inline-flex items-center gap-2 mb-6 group">
             <Sparkles className="w-6 h-6 text-gold-500 group-hover:text-gold-400 transition-colors" />

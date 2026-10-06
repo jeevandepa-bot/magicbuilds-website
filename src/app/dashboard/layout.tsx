@@ -94,13 +94,34 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </header>
 
         {/* Page Content */}
-        <main className="flex-1 p-8 overflow-y-auto relative">
+        <main className="flex-1 p-4 md:p-8 overflow-y-auto relative pb-24 md:pb-8">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold-500/5 blur-[120px] rounded-full pointer-events-none" />
           <div className="max-w-6xl mx-auto relative z-10">
             {children}
           </div>
         </main>
       </div>
+
+      {/* Mobile Bottom Navigation */}
+      <nav className="md:hidden fixed bottom-0 inset-x-0 h-16 bg-[#0a0a0a]/90 backdrop-blur-md border-t border-white/10 z-40 flex items-center justify-around px-2">
+        {SIDEBAR_LINKS.map((link) => {
+          const Icon = link.icon;
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={cn(
+                "flex flex-col items-center justify-center w-full h-full gap-1 transition-colors",
+                isActive ? "text-gold-500" : "text-gray-500 hover:text-gray-300"
+              )}
+            >
+              <Icon className="w-5 h-5" />
+              <span className="text-[10px] font-medium">{link.name}</span>
+            </Link>
+          );
+        })}
+      </nav>
     </div>
   );
 }
