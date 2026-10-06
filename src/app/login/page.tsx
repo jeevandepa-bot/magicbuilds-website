@@ -38,7 +38,7 @@ export default function Login() {
             <input 
               type="email" 
               defaultValue="demo@client.com"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500/50 transition-colors"
+              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 transition-colors"
               required
             />
           </div>
@@ -50,7 +50,7 @@ export default function Login() {
             <input 
               type="password" 
               defaultValue="password123"
-              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500/50 transition-colors"
+              className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500/50 transition-colors"
               required
             />
           </div>

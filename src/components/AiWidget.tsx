@@ -51,7 +51,7 @@ export function AiWidget() {
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          "fixed bottom-6 right-6 p-4 rounded-full bg-gold-500 text-black shadow-lg shadow-gold-500/20 hover:scale-105 transition-all z-40 magic-glow",
+          "fixed bottom-5 right-4 sm:bottom-6 sm:right-6 p-3.5 sm:p-4 rounded-full bg-gold-500 text-black shadow-lg shadow-gold-500/20 hover:scale-105 transition-all z-40 magic-glow",
           isOpen ? "scale-0 opacity-0 pointer-events-none" : "scale-100 opacity-100"
         )}
         aria-label="Open AI Assistant"
@@ -62,7 +62,7 @@ export function AiWidget() {
       {/* Chat Window */}
       <div
         className={cn(
-          "fixed bottom-6 right-6 w-[calc(100vw-3rem)] sm:w-[400px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl flex flex-col shadow-2xl transition-all duration-300 z-50 overflow-hidden",
+          "fixed inset-x-3 bottom-3 sm:inset-x-auto sm:right-6 sm:bottom-6 w-auto sm:w-[400px] h-[calc(100dvh-5rem)] sm:h-[500px] max-h-[600px] bg-[#0a0a0a] border border-white/10 rounded-2xl flex flex-col shadow-2xl transition-all duration-300 z-50 overflow-hidden",
           isOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0 pointer-events-none"
         )}
       >

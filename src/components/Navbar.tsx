@@ -35,7 +35,7 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Sparkles className="w-6 h-6 text-gold-500 group-hover:text-gold-400 transition-colors" />
@@ -74,7 +74,7 @@ export function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-gray-300 hover:text-white"
+            className="md:hidden p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-white/5 text-gray-300 hover:text-white"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -90,7 +90,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0a0a0a] border-b border-white/10 overflow-hidden"
+            className="md:hidden bg-[#0a0a0a] border-b border-white/10 overflow-hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
             <nav className="flex flex-col px-4 pt-2 pb-6 gap-4">
               {NAV_LINKS.map((link) => (
@@ -108,6 +108,18 @@ export function Navbar() {
                   {link.name}
                 </Link>
               ))}
+              <Link
+                href="/login"
+                onClick={() => setIsOpen(false)}
+                className={cn(
+                  "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                  pathname === "/login"
+                    ? "bg-gold-500/10 text-gold-500"
+                    : "text-gray-300 hover:bg-white/5 hover:text-white"
+                )}
+              >
+                Client Login
+              </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}

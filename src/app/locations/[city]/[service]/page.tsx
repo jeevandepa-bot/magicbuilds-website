@@ -60,7 +60,7 @@ export default async function LocationServicePage({
           <span className="text-sm font-medium text-gray-200">Serving {cityName} & Worldwide</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 max-w-4xl leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-6 sm:mb-8 max-w-4xl leading-tight break-words">
           Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-600 text-glow">{serviceName}</span> in {cityName}
         </h1>
         
@@ -70,9 +70,10 @@ export default async function LocationServicePage({
 
         <Link
           href="/contact"
-          className="px-8 py-4 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all magic-glow flex items-center gap-2 group"
+          className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-gold-500 text-black font-bold text-base sm:text-lg hover:bg-gold-400 transition-all magic-glow flex items-center justify-center gap-2 group text-center"
         >
-          Book a Consultation in {cityName}
+          <span className="sm:hidden">Book Consultation</span>
+          <span className="hidden sm:inline">Book a Consultation in {cityName}</span>
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </Link>
       </section>
