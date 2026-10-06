@@ -59,6 +59,12 @@ export function Navbar() {
               </Link>
             ))}
             <Link
+              href="/login"
+              className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors"
+            >
+              Client Login
+            </Link>
+            <Link
               href="/contact"
               className="px-5 py-2.5 rounded-full bg-white/5 hover:bg-gold-500/10 border border-white/10 hover:border-gold-500/50 text-white transition-all magic-glow font-medium text-sm"
             >

@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import MagicScene from "@/components/MagicScene";
 import { AiWidget } from "@/components/AiWidget";
+import { VisibilityWrapper } from "@/components/VisibilityWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,14 +23,24 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} antialiased min-h-screen flex flex-col bg-[#050505] text-[#F8FAFC]`}>
-        <MagicScene />
+        <VisibilityWrapper>
+          <MagicScene />
+        </VisibilityWrapper>
+        
         <CursorSparkle />
-        <AiWidget />
-        <Navbar />
-        <main className="flex-1 pt-20">
+        
+        <VisibilityWrapper>
+          <AiWidget />
+          <Navbar />
+        </VisibilityWrapper>
+        
+        <main className="flex-1 flex flex-col">
           {children}
         </main>
-        <Footer />
+        
+        <VisibilityWrapper>
+          <Footer />
+        </VisibilityWrapper>
       </body>
     </html>
   );
