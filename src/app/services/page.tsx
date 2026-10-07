@@ -36,39 +36,69 @@ export default function Services() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 sm:py-24 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="text-center mb-16 sm:mb-20 relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[280px] sm:w-[400px] h-[280px] sm:h-[400px] bg-gold-500/10 blur-[120px] rounded-full pointer-events-none" />
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-          Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-600 text-glow">Services</span>
+    <div className="max-w-7xl mx-auto px-4 py-24 sm:py-32 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Editorial Header */}
+      <div className="mb-24 sm:mb-32 relative">
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-gold-500/10 blur-[120px] rounded-full pointer-events-none" />
+        <span className="text-gold-500 font-bold tracking-widest uppercase text-sm mb-6 block">[ What We Do ]</span>
+        <h1 className="text-5xl md:text-7xl lg:text-[7rem] font-heading font-bold tracking-tighter mb-8 leading-[0.9]">
+          Digital <br className="hidden md:block"/>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-600 text-glow italic pr-4">Craftsmanship.</span>
         </h1>
-        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-          Comprehensive digital solutions crafted with modern technology and magical design.
+        <p className="text-xl sm:text-2xl text-gray-400 max-w-2xl font-light leading-relaxed">
+          We don't just write code. We architect scalable platforms, engineer high-performance systems, and weave magic into every pixel.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {/* Editorial List Layout instead of generic grid */}
+      <div className="space-y-0">
         {services.map((service, idx) => (
-          <div key={idx} className="p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] backdrop-blur-3xl border border-white/10 hover:border-gold-500/30 hover:bg-white/[0.04] transition-all duration-300">
-            <div className="mb-6 sm:mb-8 p-3 sm:p-4 bg-white/5 border border-white/10 rounded-2xl inline-block shadow-inner">
-              {service.icon}
+          <div 
+            key={idx} 
+            className="group relative border-t border-white/10 py-12 md:py-16 hover:bg-white/[0.01] transition-colors"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+              {/* Massive Number */}
+              <div className="md:col-span-2 hidden md:block">
+                <span className="text-5xl lg:text-7xl font-heading font-bold text-white/5 group-hover:text-gold-500/20 transition-colors">
+                  0{idx + 1}
+                </span>
+              </div>
+              
+              {/* Title & Icon */}
+              <div className="md:col-span-5 flex flex-col items-start">
+                <div className="mb-6 p-4 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl shadow-inner group-hover:border-gold-500/30 transition-colors">
+                  {service.icon}
+                </div>
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 group-hover:text-gold-400 transition-colors tracking-tight">
+                  {service.title}
+                </h3>
+              </div>
+
+              {/* Description */}
+              <div className="md:col-span-5 md:pt-4">
+                <span className="text-gold-500 font-bold tracking-widest uppercase text-xs mb-4 block md:hidden">0{idx + 1}</span>
+                <p className="text-gray-400 text-lg sm:text-xl leading-relaxed font-light">
+                  {service.description}
+                </p>
+              </div>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-4">{service.title}</h3>
-            <p className="text-gray-400 leading-relaxed">
-              {service.description}
-            </p>
           </div>
         ))}
+        {/* Closing Border */}
+        <div className="border-t border-white/10" />
       </div>
 
-      <div className="mt-16 sm:mt-24 text-center p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-white/[0.05] to-transparent backdrop-blur-3xl border border-white/10 relative overflow-hidden">
-        <h2 className="text-3xl font-bold mb-6">Need something highly custom?</h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-          We love tackling unique challenges. If you have a specific vision in mind, let's talk and figure out the best technological path forward.
+      {/* CTA Section */}
+      <div className="mt-32 text-center p-8 sm:p-16 rounded-3xl bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-3xl border border-white/10 relative overflow-hidden flex flex-col items-center">
+        <div className="absolute inset-0 bg-gold-500/5 blur-[100px] pointer-events-none" />
+        <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 tracking-tighter relative z-10">Beyond the scope?</h2>
+        <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light relative z-10">
+          We thrive on the cutting edge. If you have a highly custom architectural challenge, let's architect the perfect path forward.
         </p>
         <Link
           href="/contact"
-          className="inline-flex px-8 py-4 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all active:scale-95 magic-glow"
+          className="relative z-10 inline-flex px-10 py-5 rounded-full bg-gold-500 text-black font-bold text-lg hover:bg-gold-400 transition-all active:scale-95 magic-glow"
         >
           Discuss Your Vision
         </Link>
