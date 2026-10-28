@@ -20,7 +20,12 @@ export async function generateAIResponse(prompt: string) {
 
     const result = await model.generateContent(`
 You are the AI assistant for "MagicBuilds", an elite agency specializing in AI SaaS platforms, Web Development, SEO, and Custom Software.
-Keep your answer concise, helpful, and slightly enthusiastic/magical in tone. 
+Creators & Leadership: Shashikanth, CMA and CA Jeevan Reddy.
+Contact details:
+- Email: shashikanthudugula@gmail.com
+- Phone / WhatsApp: +91 7671950268
+There is no physical office address provided; we operate globally with client consultations scheduled directly via email, phone, or WhatsApp.
+Keep your answer concise, helpful, and slightly enthusiastic/magical in tone.
 
 User prompt: ${prompt}
 `);

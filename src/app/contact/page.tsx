@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone, MessageSquare, Sparkles } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -85,43 +85,54 @@ export default function Contact() {
         {/* Contact Info */}
         <div className="flex flex-col justify-center space-y-8 sm:space-y-12">
           <div className="flex items-start gap-4 sm:gap-6 group">
-            <div className="p-3 sm:p-4 rounded-2xl bg-white/5 group-hover:bg-gold-500/10 transition-colors">
+            <div className="p-3 sm:p-4 rounded-2xl bg-white/5 group-hover:bg-gold-500/10 transition-colors shrink-0">
               <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-gold-500" />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2">Email Us</h3>
-              <p className="text-gray-400 mb-1">For general inquiries & projects:</p>
-              <a href="mailto:hello@magicbuilds.com" className="text-base sm:text-lg text-white hover:text-gold-400 transition-colors break-all sm:break-normal">
-                hello@magicbuilds.com
+              <p className="text-gray-400 mb-1">Direct inquiries & project proposals:</p>
+              <a href="mailto:shashikanthudugula@gmail.com" className="text-base sm:text-lg text-white hover:text-gold-400 transition-colors break-all">
+                shashikanthudugula@gmail.com
               </a>
             </div>
           </div>
 
           <div className="flex items-start gap-4 sm:gap-6 group">
-            <div className="p-3 sm:p-4 rounded-2xl bg-white/5 group-hover:bg-gold-500/10 transition-colors">
+            <div className="p-3 sm:p-4 rounded-2xl bg-white/5 group-hover:bg-gold-500/10 transition-colors shrink-0">
               <Phone className="w-6 h-6 sm:w-8 sm:h-8 text-gold-500" />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2">Call Us</h3>
-              <p className="text-gray-400 mb-1">Mon-Fri from 9am to 6pm:</p>
-              <a href="tel:+15551234567" className="text-base sm:text-lg text-white hover:text-gold-400 transition-colors">
-                +1 (555) 123-4567
+              <p className="text-gray-400 mb-1">Direct founder line:</p>
+              <a href="tel:7671950268" className="text-base sm:text-lg text-white hover:text-gold-400 transition-colors">
+                +91 7671950268
               </a>
             </div>
           </div>
 
           <div className="flex items-start gap-4 sm:gap-6 group">
-            <div className="p-3 sm:p-4 rounded-2xl bg-white/5 group-hover:bg-gold-500/10 transition-colors">
-              <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-gold-500" />
+            <div className="p-3 sm:p-4 rounded-2xl bg-white/5 group-hover:bg-gold-500/10 transition-colors shrink-0">
+              <MessageSquare className="w-6 h-6 sm:w-8 sm:h-8 text-gold-500" />
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-2">Visit Us</h3>
-              <p className="text-gray-400 mb-1">Our headquarters:</p>
-              <p className="text-base sm:text-lg text-white">
-                123 Innovation Drive<br />
-                Tech District, SF 94103
-              </p>
+              <h3 className="text-xl font-bold mb-2">WhatsApp Chat</h3>
+              <p className="text-gray-400 mb-1">Instant messaging & consultations:</p>
+              <a 
+                href="https://wa.me/917671950268" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-base sm:text-lg text-gold-400 hover:text-gold-300 transition-colors underline-offset-4 hover:underline"
+              >
+                Chat on WhatsApp (+91 7671950268)
+              </a>
             </div>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md">
+            <p className="text-xs uppercase tracking-widest text-gold-500 font-bold mb-2">Creators & Leadership</p>
+            <p className="text-sm text-gray-300">
+              Founded & led by <span className="text-white font-medium">Shashikanth, CMA</span> and <span className="text-white font-medium">CA Jeevan Reddy</span>.
+            </p>
           </div>
         </div>
       </div>
