@@ -83,17 +83,24 @@ export default function Contact() {
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-col justify-center space-y-8 sm:space-y-12">
+        <div className="flex flex-col justify-center space-y-8 sm:space-y-10">
           <div className="flex items-start gap-4 sm:gap-6 group">
             <div className="p-3 sm:p-4 rounded-2xl bg-white/5 group-hover:bg-gold-500/10 transition-colors shrink-0">
               <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-gold-500" />
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-2">Email Us</h3>
-              <p className="text-gray-400 mb-1">Direct inquiries & project proposals:</p>
-              <a href="mailto:shashikanthudugula@gmail.com" className="text-base sm:text-lg text-white hover:text-gold-400 transition-colors break-all">
-                shashikanthudugula@gmail.com
-              </a>
+              <h3 className="text-xl font-bold mb-2">Email the Founders</h3>
+              <p className="text-gray-400 mb-2">Direct project proposals & strategic partnerships:</p>
+              <div className="flex flex-col gap-1.5">
+                <a href="mailto:jeevandepa@gmail.com" className="text-base text-white hover:text-gold-400 transition-colors break-all">
+                  <span className="text-gray-400 text-xs uppercase tracking-wider block">CA Jeevan Reddy</span>
+                  jeevandepa@gmail.com
+                </a>
+                <a href="mailto:shashikanthudugula@gmail.com" className="text-base text-white hover:text-gold-400 transition-colors break-all">
+                  <span className="text-gray-400 text-xs uppercase tracking-wider block">CMA Shashikanth</span>
+                  shashikanthudugula@gmail.com
+                </a>
+              </div>
             </div>
           </div>
 
@@ -102,11 +109,18 @@ export default function Contact() {
               <Phone className="w-6 h-6 sm:w-8 sm:h-8 text-gold-500" />
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-2">Call Us</h3>
-              <p className="text-gray-400 mb-1">Direct founder line:</p>
-              <a href="tel:7671950268" className="text-base sm:text-lg text-white hover:text-gold-400 transition-colors">
-                +91 7671950268
-              </a>
+              <h3 className="text-xl font-bold mb-2">Call Direct</h3>
+              <p className="text-gray-400 mb-2">Speak directly with leadership:</p>
+              <div className="flex flex-col gap-1.5">
+                <a href="tel:7671950268" className="text-base text-white hover:text-gold-400 transition-colors">
+                  <span className="text-gray-400 text-xs uppercase tracking-wider block">CA Jeevan Reddy</span>
+                  +91 7671950268
+                </a>
+                <a href="tel:7036948050" className="text-base text-white hover:text-gold-400 transition-colors">
+                  <span className="text-gray-400 text-xs uppercase tracking-wider block">CMA Shashikanth</span>
+                  +91 7036948050
+                </a>
+              </div>
             </div>
           </div>
 
@@ -115,23 +129,33 @@ export default function Contact() {
               <MessageSquare className="w-6 h-6 sm:w-8 sm:h-8 text-gold-500" />
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-2">WhatsApp Chat</h3>
-              <p className="text-gray-400 mb-1">Instant messaging & consultations:</p>
-              <a 
-                href="https://wa.me/917671950268" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-base sm:text-lg text-gold-400 hover:text-gold-300 transition-colors underline-offset-4 hover:underline"
-              >
-                Chat on WhatsApp (+91 7671950268)
-              </a>
+              <h3 className="text-xl font-bold mb-2">WhatsApp Consultations</h3>
+              <p className="text-gray-400 mb-2">Instant messaging for project scoping:</p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://wa.me/917671950268" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="px-4 py-2 rounded-xl bg-white/5 hover:bg-gold-500/10 border border-white/10 hover:border-gold-500/40 text-sm text-gold-400 transition-all inline-flex items-center gap-2"
+                >
+                  WhatsApp Jeevan
+                </a>
+                <a 
+                  href="https://wa.me/917036948050" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="px-4 py-2 rounded-xl bg-white/5 hover:bg-gold-500/10 border border-white/10 hover:border-gold-500/40 text-sm text-gold-400 transition-all inline-flex items-center gap-2"
+                >
+                  WhatsApp Shashikanth
+                </a>
+              </div>
             </div>
           </div>
 
           <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md">
             <p className="text-xs uppercase tracking-widest text-gold-500 font-bold mb-2">Creators & Leadership</p>
             <p className="text-sm text-gray-300">
-              Founded & led by <span className="text-white font-medium">Shashikanth, CMA</span> and <span className="text-white font-medium">CA Jeevan Reddy</span>.
+              Founded & led by <span className="text-white font-medium">CMA Shashikanth</span> and <span className="text-white font-medium">CA Jeevan Reddy</span>.
             </p>
           </div>
         </div>
